@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-5">
+      <button routerLink="/create-customer" class="btn btn-success btn-block btn-lg">
+        <i class="fa fa-plus"></i>
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 mt-5">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Rating</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let customer of list$ | async">
+            <td>{{ customer.id }}</td>
+            <td>{{ customer.name }}</td>
+            <td>{{ customer.email }}</td>
+            <td>{{ customer.address }}</td>
+            <td>{{ customer.rating }}</td>
+            <td>
+              <div class="btn-group">
+
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .example {
+            border: 1px solid black;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="example"> A div with class="example" </div>
+    <div class="example"> Another div with class="example" </div>
+    <p class="example">This is a p element with class="example".</p>
+    <p>This is a <span class="example">span</span> element with class="example"
+        inside another p element.</p>
+    <script
+        src="dom.js"
+        type="module"
+    ></script>
+    <script type="module"> 
+        import { changeElements } from './dom.js';
+        changeElements();
+    </script>
+</body>
+
+</html>
