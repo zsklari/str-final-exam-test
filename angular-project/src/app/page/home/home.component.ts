@@ -16,7 +16,11 @@ export class HomeComponent implements OnInit {
     private customerService: CustomerService,
   ) {}
 
-  onDelete(id: number): void {}
+  onDelete(id: number): void {
+    this.customerService.delete(id).subscribe(
+      () => this.list$ = this.customerService.getAll()
+    );
+  }
 
   ngOnInit(): void {
   }

@@ -22,6 +22,14 @@ export class CustomerService {
     return this.http.get<Customer>(`${this.apiUrl}/${id}`);
   }
 
+  create(customer: Customer): Observable<Customer> {
+    return this.http.post<Customer>(this.apiUrl, customer);
+  }
+
+  update(customer: Customer): Observable<Customer> {
+    return this.http.patch<Customer>(`${this.apiUrl}/${customer.id}`, customer);
+  }
+
   delete(id: number): Observable<Customer> {
     return this.http.delete<Customer>(`${this.apiUrl}/${id}`);
   }
